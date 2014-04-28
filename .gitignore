@@ -1,0 +1,4 @@
+*.pyc
+*/ipython_checkpoints/
+*/.ipython_checkpoints/
+
