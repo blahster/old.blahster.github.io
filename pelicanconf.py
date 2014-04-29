@@ -33,7 +33,8 @@ DEFAULT_PAGINATION = False
 #RELATIVE_URLS = True
 
 THEME = '../pelican-bootstrap3'
-PYGMENTS_STYLE = 'default'
+#PYGMENTS_STYLE = 'default'
+PYGMENTS_STYLE = 'zenburn'
 # PYGMENTS_STYLE='friendly'
 
 # For pelican-ootstrap3
