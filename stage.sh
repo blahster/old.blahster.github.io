@@ -6,4 +6,4 @@ if [ -d "output" ]; then
 else
    echo 'output directory not found'
 fi
-
+make clean
