@@ -2048,6 +2048,695 @@ with two lines in it</code></pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="kn">import</span> <span class="nn">pandas</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&#39;/Users/hsambra/Downloads/lahman-csv_2014-02-14/AwardsShareManagers.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[4]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>awardID</th>
+      <th>yearID</th>
+      <th>lgID</th>
+      <th>playerID</th>
+      <th>pointsWon</th>
+      <th>pointsMax</th>
+      <th>votesFirst</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0 </th>
+      <td> Mgr of the year</td>
+      <td> 1983</td>
+      <td> AL</td>
+      <td> altobjo01</td>
+      <td>   7</td>
+      <td>  28</td>
+      <td>  7</td>
+    </tr>
+    <tr>
+      <th>1 </th>
+      <td> Mgr of the year</td>
+      <td> 1983</td>
+      <td> AL</td>
+      <td>   coxbo01</td>
+      <td>   4</td>
+      <td>  28</td>
+      <td>  4</td>
+    </tr>
+    <tr>
+      <th>2 </th>
+      <td> Mgr of the year</td>
+      <td> 1983</td>
+      <td> AL</td>
+      <td> larusto01</td>
+      <td>  17</td>
+      <td>  28</td>
+      <td> 17</td>
+    </tr>
+    <tr>
+      <th>3 </th>
+      <td> Mgr of the year</td>
+      <td> 1983</td>
+      <td> NL</td>
+      <td> lasorto01</td>
+      <td>  10</td>
+      <td>  24</td>
+      <td> 10</td>
+    </tr>
+    <tr>
+      <th>4 </th>
+      <td> Mgr of the year</td>
+      <td> 1983</td>
+      <td> NL</td>
+      <td> lillibo01</td>
+      <td>   9</td>
+      <td>  24</td>
+      <td>  9</td>
+    </tr>
+    <tr>
+      <th>5 </th>
+      <td> Mgr of the year</td>
+      <td> 1983</td>
+      <td> NL</td>
+      <td> owenspa99</td>
+      <td>   1</td>
+      <td>  24</td>
+      <td>  1</td>
+    </tr>
+    <tr>
+      <th>6 </th>
+      <td> Mgr of the year</td>
+      <td> 1983</td>
+      <td> NL</td>
+      <td> tannech01</td>
+      <td>   4</td>
+      <td>  24</td>
+      <td>  4</td>
+    </tr>
+    <tr>
+      <th>7 </th>
+      <td> Mgr of the year</td>
+      <td> 1984</td>
+      <td> AL</td>
+      <td> andersp01</td>
+      <td>  96</td>
+      <td> 140</td>
+      <td> 13</td>
+    </tr>
+    <tr>
+      <th>8 </th>
+      <td> Mgr of the year</td>
+      <td> 1984</td>
+      <td> AL</td>
+      <td>   coxbo01</td>
+      <td>   9</td>
+      <td> 140</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>9 </th>
+      <td> Mgr of the year</td>
+      <td> 1984</td>
+      <td> AL</td>
+      <td> gardnbi02</td>
+      <td>  48</td>
+      <td> 140</td>
+      <td>  4</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td> Mgr of the year</td>
+      <td> 1984</td>
+      <td> AL</td>
+      <td> howsedi01</td>
+      <td>  95</td>
+      <td> 140</td>
+      <td> 11</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td> Mgr of the year</td>
+      <td> 1984</td>
+      <td> AL</td>
+      <td> mcnamjo99</td>
+      <td>   4</td>
+      <td> 140</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td> Mgr of the year</td>
+      <td> 1984</td>
+      <td> NL</td>
+      <td>  freyji99</td>
+      <td> 101</td>
+      <td> 120</td>
+      <td> 16</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td> Mgr of the year</td>
+      <td> 1984</td>
+      <td> NL</td>
+      <td> johnsda02</td>
+      <td>  72</td>
+      <td> 120</td>
+      <td>  4</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td> Mgr of the year</td>
+      <td> 1984</td>
+      <td> NL</td>
+      <td> lillibo01</td>
+      <td>   2</td>
+      <td> 120</td>
+      <td>  1</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td> Mgr of the year</td>
+      <td> 1984</td>
+      <td> NL</td>
+      <td> willidi02</td>
+      <td>  41</td>
+      <td> 120</td>
+      <td>  4</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td> Mgr of the year</td>
+      <td> 1985</td>
+      <td> AL</td>
+      <td>   coxbo01</td>
+      <td> 104</td>
+      <td> 140</td>
+      <td> 16</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td> Mgr of the year</td>
+      <td> 1985</td>
+      <td> AL</td>
+      <td> howsedi01</td>
+      <td>  66</td>
+      <td> 140</td>
+      <td>  4</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td> Mgr of the year</td>
+      <td> 1985</td>
+      <td> AL</td>
+      <td> larusto01</td>
+      <td>   1</td>
+      <td> 140</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td> Mgr of the year</td>
+      <td> 1985</td>
+      <td> AL</td>
+      <td> martibi02</td>
+      <td>  19</td>
+      <td> 140</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td> Mgr of the year</td>
+      <td> 1985</td>
+      <td> AL</td>
+      <td> mauchge01</td>
+      <td>  57</td>
+      <td> 140</td>
+      <td>  8</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td> Mgr of the year</td>
+      <td> 1985</td>
+      <td> AL</td>
+      <td> mcnamjo99</td>
+      <td>   1</td>
+      <td> 140</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td> Mgr of the year</td>
+      <td> 1985</td>
+      <td> AL</td>
+      <td> mooreja01</td>
+      <td>   4</td>
+      <td> 140</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td> Mgr of the year</td>
+      <td> 1985</td>
+      <td> NL</td>
+      <td> herzowh01</td>
+      <td>  86</td>
+      <td> 120</td>
+      <td> 11</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td> Mgr of the year</td>
+      <td> 1985</td>
+      <td> NL</td>
+      <td> johnsda02</td>
+      <td>   4</td>
+      <td> 120</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td> Mgr of the year</td>
+      <td> 1985</td>
+      <td> NL</td>
+      <td> lasorto01</td>
+      <td>  39</td>
+      <td> 120</td>
+      <td>  3</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td> Mgr of the year</td>
+      <td> 1985</td>
+      <td> NL</td>
+      <td> rodgebu01</td>
+      <td>   2</td>
+      <td> 120</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td> Mgr of the year</td>
+      <td> 1985</td>
+      <td> NL</td>
+      <td>  rosepe01</td>
+      <td>  85</td>
+      <td> 120</td>
+      <td> 10</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td> Mgr of the year</td>
+      <td> 1986</td>
+      <td> AL</td>
+      <td> corrapa01</td>
+      <td>  18</td>
+      <td> 140</td>
+      <td>  1</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td> Mgr of the year</td>
+      <td> 1986</td>
+      <td> AL</td>
+      <td> mauchge01</td>
+      <td>  44</td>
+      <td> 140</td>
+      <td>  2</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td> Mgr of the year</td>
+      <td> 1986</td>
+      <td> AL</td>
+      <td> mcnamjo99</td>
+      <td>  95</td>
+      <td> 140</td>
+      <td> 13</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td> Mgr of the year</td>
+      <td> 1986</td>
+      <td> AL</td>
+      <td> pinielo01</td>
+      <td>   5</td>
+      <td> 140</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td> Mgr of the year</td>
+      <td> 1986</td>
+      <td> AL</td>
+      <td> valenbo02</td>
+      <td>  90</td>
+      <td> 140</td>
+      <td> 12</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td> Mgr of the year</td>
+      <td> 1986</td>
+      <td> NL</td>
+      <td> craigro01</td>
+      <td>  42</td>
+      <td> 120</td>
+      <td>  2</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td> Mgr of the year</td>
+      <td> 1986</td>
+      <td> NL</td>
+      <td> felskjo01</td>
+      <td>   3</td>
+      <td> 120</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td> Mgr of the year</td>
+      <td> 1986</td>
+      <td> NL</td>
+      <td> johnsda02</td>
+      <td>  62</td>
+      <td> 120</td>
+      <td>  3</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td> Mgr of the year</td>
+      <td> 1986</td>
+      <td> NL</td>
+      <td> lanieha01</td>
+      <td> 108</td>
+      <td> 120</td>
+      <td> 19</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td> Mgr of the year</td>
+      <td> 1986</td>
+      <td> NL</td>
+      <td> leylaji99</td>
+      <td>   1</td>
+      <td> 120</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td> Mgr of the year</td>
+      <td> 1987</td>
+      <td> AL</td>
+      <td> andersp01</td>
+      <td>  90</td>
+      <td> 140</td>
+      <td> 11</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td> Mgr of the year</td>
+      <td> 1987</td>
+      <td> AL</td>
+      <td> edwardo01</td>
+      <td>   1</td>
+      <td> 140</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td> Mgr of the year</td>
+      <td> 1987</td>
+      <td> AL</td>
+      <td> kellyto01</td>
+      <td>  74</td>
+      <td> 140</td>
+      <td> 10</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td> Mgr of the year</td>
+      <td> 1987</td>
+      <td> AL</td>
+      <td> larusto01</td>
+      <td>   8</td>
+      <td> 140</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td> Mgr of the year</td>
+      <td> 1987</td>
+      <td> AL</td>
+      <td> pinielo01</td>
+      <td>   1</td>
+      <td> 140</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td> Mgr of the year</td>
+      <td> 1987</td>
+      <td> AL</td>
+      <td> trebeto99</td>
+      <td>  78</td>
+      <td> 140</td>
+      <td>  7</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td> Mgr of the year</td>
+      <td> 1987</td>
+      <td> NL</td>
+      <td> craigro01</td>
+      <td>  65</td>
+      <td> 120</td>
+      <td>  6</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td> Mgr of the year</td>
+      <td> 1987</td>
+      <td> NL</td>
+      <td> herzowh01</td>
+      <td>  54</td>
+      <td> 120</td>
+      <td>  5</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td> Mgr of the year</td>
+      <td> 1987</td>
+      <td> NL</td>
+      <td> johnsda02</td>
+      <td>   3</td>
+      <td> 120</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td> Mgr of the year</td>
+      <td> 1987</td>
+      <td> NL</td>
+      <td> leylaji99</td>
+      <td>   2</td>
+      <td> 120</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td> Mgr of the year</td>
+      <td> 1987</td>
+      <td> NL</td>
+      <td> rodgebu01</td>
+      <td>  92</td>
+      <td> 120</td>
+      <td> 13</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td> Mgr of the year</td>
+      <td> 1988</td>
+      <td> AL</td>
+      <td> andersp01</td>
+      <td>  37</td>
+      <td> 140</td>
+      <td>  3</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td> Mgr of the year</td>
+      <td> 1988</td>
+      <td> AL</td>
+      <td> fregoji01</td>
+      <td>   1</td>
+      <td> 140</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td> Mgr of the year</td>
+      <td> 1988</td>
+      <td> AL</td>
+      <td> kellyto01</td>
+      <td>   6</td>
+      <td> 140</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td> Mgr of the year</td>
+      <td> 1988</td>
+      <td> AL</td>
+      <td> larusto01</td>
+      <td> 103</td>
+      <td> 140</td>
+      <td> 15</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td> Mgr of the year</td>
+      <td> 1988</td>
+      <td> AL</td>
+      <td> morgajo01</td>
+      <td>  89</td>
+      <td> 140</td>
+      <td>  9</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td> Mgr of the year</td>
+      <td> 1988</td>
+      <td> AL</td>
+      <td> pinielo01</td>
+      <td>   1</td>
+      <td> 140</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td> Mgr of the year</td>
+      <td> 1988</td>
+      <td> AL</td>
+      <td> trebeto99</td>
+      <td>  15</td>
+      <td> 140</td>
+      <td>  1</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td> Mgr of the year</td>
+      <td> 1988</td>
+      <td> NL</td>
+      <td> johnsda02</td>
+      <td>  38</td>
+      <td> 120</td>
+      <td>  2</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td> Mgr of the year</td>
+      <td> 1988</td>
+      <td> NL</td>
+      <td> lasorto01</td>
+      <td> 101</td>
+      <td> 120</td>
+      <td> 19</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td> Mgr of the year</td>
+      <td> 1988</td>
+      <td> NL</td>
+      <td> leylaji99</td>
+      <td>  50</td>
+      <td> 120</td>
+      <td>  1</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td> Mgr of the year</td>
+      <td> 1988</td>
+      <td> NL</td>
+      <td> mckeoja99</td>
+      <td>  27</td>
+      <td> 120</td>
+      <td>  2</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
+<p>385 rows × 7 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
 In&nbsp;[]:
 </div>
 <div class="inner_cell">
@@ -2116,11 +2805,6 @@ In&nbsp;[]:
                 <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                     <ul class="list-group " id="tags">
                         <li class="list-group-item tag-4">
-                            <a href="/tag/python.html">
-                                python
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
                             <a href="/tag/pelican.html">
                                 pelican
                             </a>
@@ -2128,6 +2812,11 @@ In&nbsp;[]:
                         <li class="list-group-item tag-4">
                             <a href="/tag/ipython-notebook.html">
                                 ipython-notebook
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/tag/python.html">
+                                python
                             </a>
                         </li>
                     </ul>
