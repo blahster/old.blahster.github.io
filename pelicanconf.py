@@ -46,6 +46,6 @@ BOOTSTRAP_THEME = 'spacelab'
 DISPLAY_BREADCRUMBS = False
 DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
 
-DISQUS_SITENAME = "doubleblahster"
+DISQUS_SITENAME = "blahstergithubio"
 
 
